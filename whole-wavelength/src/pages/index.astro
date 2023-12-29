@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Welkom bij mijn We love web blog!</h1>
+			<p>
+				Bij deze blog hou ik de we love webs van FDND bij. Ik hou hier
+				bij wie en waarvoor een praatje heeft gegeven bij de opleiding
+				FDND. Ik geef een korte samenvatting over wat er in de talk
+				gezegd is. En ik geef wat achtergrond informatie over wie de
+				talk gegeven heeft.
+			</p>
+			<style>
+				h1 {
+					margin: 3em 0;
+				}
+			</style>
+		</main>
+		<Footer />
+	</body>
+</html>
