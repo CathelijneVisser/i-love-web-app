@@ -7,20 +7,12 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const {
-	title,
-	description,
-	pubDate,
-	updatedDate,
-	heroImage,
-	name,
-	descriptionTalker,
-} = Astro.props;
+const { title, pubDate, heroImage, name, descriptionTalker } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} />
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -35,13 +27,6 @@ const {
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
 			}
 			header {
 				margin-bottom: 1em;
@@ -59,6 +44,15 @@ const {
 			.last-updated-on {
 				font-style: italic;
 			}
+			@media (min-width: 1200px) {
+				main {
+					background-color: hotpink;
+				}
+				p {
+					background-color: aqua;
+					max-width: 10em;
+				}
+			}
 		</style>
 	</head>
 
@@ -71,18 +65,10 @@ const {
 					<h2>{name}</h2>
 					<div class="date">
 						<FormattedDate date={pubDate} />
-						{
-							updatedDate && (
-								<div class="last-updated-on">
-									Last updated on{" "}
-									<FormattedDate date={updatedDate} />
-								</div>
-							)
-						}
 					</div>
 					<hr />
 				</header>
-				<slot />
+				<p><slot /></p>
 				<div class="hero-image">
 					{heroImage && <img src={heroImage} alt="" />}
 				</div>
