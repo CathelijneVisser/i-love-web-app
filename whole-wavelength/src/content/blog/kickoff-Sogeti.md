@@ -1,6 +1,6 @@
 ---
 title: 'Kickoff sogeti'
-pubDate: '16-01-2024'
+pubDate: 'feb 16 2024'
 heroImage: '/blog-placeholder-3.jpg'
 name: 'sogeti'
 descriptionTalker: 'Sogeti is mijn stage bedrijf. Ik ga hier 5 februari beginnen met stage lopen. Het is een groot bedrijf dat voor andere bedrijven hun processen automatiseerd.'
